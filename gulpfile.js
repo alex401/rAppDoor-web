@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-htmlmin');
 var paths = {
     scripts: 'src/js/**/*.*',
-    styles: 'src/less/**/*.*',
+    libs: 'src/components/**/dist/**/*.*',
+    styles: 'src/css/*.*',
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     index: 'src/index.html',
@@ -47,7 +48,7 @@ gulp.task('copy-bower_fonts', function() {
 /**
  * Handle custom files
  */
-gulp.task('build-custom', ['custom-images', 'custom-js', 'custom-less', 'custom-templates']);
+gulp.task('build-custom', ['custom-images', 'custom-components' ,'custom-js', 'custom-less', 'custom-templates']);
 
 gulp.task('custom-images', function() {
     return gulp.src(paths.images)
@@ -59,6 +60,11 @@ gulp.task('custom-js', function() {
 //        .pipe(minifyJs())
         .pipe(concat('dashboard.min.js'))
         .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('custom-components', function() {
+    return gulp.src(paths.libs)
+        .pipe(gulp.dest('dist/components'));
 });
 
 gulp.task('custom-less', function() {
@@ -106,4 +112,3 @@ gulp.task('livereload', function() {
  */
 gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
-
