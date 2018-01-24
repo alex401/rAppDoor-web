@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Route configuration for the RDash module.
+ * Route configuration
  */
 angular.module('UBSDash').config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -18,18 +18,6 @@ angular.module('UBSDash').config(['$stateProvider', '$urlRouterProvider',
             .state('applications', {
                 url: '/applications',
                 templateUrl: 'templates/applications.html'
-            })
-            .state('susjob', {
-                url: '/susjob',
-                templateUrl: 'templates/susjob.html'
-            })
-            .state('susjobAdd', {
-                url: '/susjobAdd',
-                templateUrl: 'templates/susjobadd.html'
-            })
-            .state('apps', {
-                url: '/apps',
-                templateUrl: 'templates/apps.html'
             })
             .state('trending', {
                 url: '/trending',

@@ -7,19 +7,8 @@ angular.module('UBSDash')
 
 function MasterCtrl($scope, $cookieStore) {
     /**
-     * Sidebar Toggle & Cookie Control
+     * Master Controller will have some stuff to do, no worries.
      */
 
-    $scope.getWidth = function() {
-        return window.innerWidth;
-    };
 
-    $scope.toggleSidebar = function() {
-        $scope.toggle = !$scope.toggle;
-        $cookieStore.put('toggle', $scope.toggle);
-    };
-
-    window.onresize = function() {
-        $scope.$apply();
-    };
 }
