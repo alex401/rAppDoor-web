@@ -20,6 +20,10 @@ angular.module('rAppDoor').config(['$stateProvider', '$urlRouterProvider','$loca
                 url: '/applications',
                 templateUrl: 'templates/applications.html'
             })
+            .state('help', {
+                url: '/help',
+                templateUrl: 'templates/help.html'
+            })
             .state('trending', {
                 url: '/trending',
                 templateUrl: 'templates/trending.html'
