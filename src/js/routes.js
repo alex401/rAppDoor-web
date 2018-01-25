@@ -3,11 +3,12 @@
 /**
  * Route configuration
  */
-angular.module('rAppDoor').config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+angular.module('rAppDoor').config(['$stateProvider', '$urlRouterProvider','$locationProvider',
+    function($stateProvider, $urlRouterProvider, $locationProvider) {
 
         // For unmatched routes
         $urlRouterProvider.otherwise('/');
+        $locationProvider.hashPrefix('');
 
         // Application routes
         $stateProvider
