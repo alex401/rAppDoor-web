@@ -3,7 +3,7 @@
 /**
  * Route configuration
  */
-angular.module('UBSDash').config(['$stateProvider', '$urlRouterProvider',
+angular.module('rAppDoor').config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
 
         // For unmatched routes

@@ -1,16 +1,16 @@
 /**
- * Master Controller
+ * rAppDoor API communication controller
  */
 
-angular.module('UBSDash')
+angular.module('rAppDoor')
     .controller('ApplicationCtrl', ['$scope', '$http', ApplicationCtrl]);
+
 function ApplicationCtrl($scope, $http) {
 
 // ****************************
 // Initialise variables & scope
 // ****************************
 $scope.appsList =  [];
-$scope.appServersList =  [];
 $scope.searchText = "";
 
 // ****************************
@@ -26,7 +26,6 @@ $scope.searchText = "";
   // ****************************
 
   var loadAppsList = function () {
-  //  $http.defaults.headers.common.Authorization = 'Basic YWxleDpudGNvcmVLMDA3Cg==';
     $http({
       method: 'GET',
       url: 'http://localhost:3000/api/applications'
@@ -40,7 +39,6 @@ $scope.searchText = "";
   }
 
   var loadAppMetrics = function () {
-  //  $http.defaults.headers.common.Authorization = 'Basic YWxleDpudGNvcmVLMDA3Cg==';
     $http({
       method: 'GET',
       url: 'http://localhost:3000/api/applications/metrics'

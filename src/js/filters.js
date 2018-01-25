@@ -1,4 +1,4 @@
-angular.module('UBSDash',[])
+angular.module('rAppDoor',[])
 .filter('custom', function() {
   return function(input, search) {
     if (!input) return input;

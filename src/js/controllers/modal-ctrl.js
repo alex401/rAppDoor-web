@@ -1,4 +1,4 @@
-angular.module('UBSDash').controller('ModalCtrl', function ($scope, $uibModal, $log) {
+angular.module('rAppDoor').controller('ModalCtrl', function ($scope, $uibModal, $log) {
 
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -35,7 +35,7 @@ angular.module('UBSDash').controller('ModalCtrl', function ($scope, $uibModal, $
 // Please note that $uibModalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
 
-angular.module('UBSDash').controller('ModalAppCtrl', function ($scope, $uibModalInstance, items) {
+angular.module('rAppDoor').controller('ModalAppCtrl', function ($scope, $uibModalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {
